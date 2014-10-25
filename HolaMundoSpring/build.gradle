@@ -1,0 +1,38 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies { 
+    compile 'org.springframework:spring-context:4.1.1.RELEASE'
+	compile 'org.slf4j:slf4j-api:1.7.7' //Compile cuando es codigo utilizado en el desarrollo
+	runtime 'org.slf4j:slf4j-log4j12:1.7.7' //Usamos runtime para que no usemos el codigo y porque solo se usa en tiempo de ejecucion
+	runtime 'org.slf4j:jcl-over-slf4j:1.7.7' 
+	
+    testCompile 'junit:junit:4.11'
+}
+
+configurations{compile.exclude module: 'commons-logging'} // para que no se compile esta libreria
+
+//No lo necesitamos
+//test {
+//    systemProperties 'property': 'value'
+//}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
