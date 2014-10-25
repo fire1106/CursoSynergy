@@ -1,0 +1,48 @@
+//[ERROR] significa que al correr el codigo tenia un error y fue corregido y {} dentro va como estaba antes y fallaba
+
+subprojects {
+	
+	apply plugin: 'java'  	//Se definen plugins
+	apply plugin: 'eclipse'
+	version = '0.0.1'		//Se define variable
+	def defaultEncoding = 'ISO-8859-1'
+	compileJava{options.encoding = defaultEncoding} //[ERROR] tiene que ser con llaves
+	compileTestJava{options.encoding = defaultEncoding} //[ERROR] tenia mal escrito encoding
+	ext {springVersion='4.1.0.RELEASE'} //[ERROR] tenia guin medio despues del 0 {4.1.0-RELEASE}
+	
+	//Usaremos los repositorios de maven
+	repositories{mavenCentral()}
+	
+	dependencies {
+		compile 'org.slf4j:slf4j-api:1.7.7'  //empleo de SL4J
+
+		runtime 'org.slf4j:slf4j-log4j12:1.7.7' //uso de log4j
+		runtime 'org.slf4j:jcl-over-slf4j:1.7.7' //puente  java commons-logging con sl4j
+
+		testCompile group: 'junit', name: 'junit', version: '4.+'
+		
+	}
+	
+	configurations {compile.exclude module: 'commons-logging'}
+}
+
+//para pasar las configuraciones del padre a los hijos
+project(':bookmule-persistence-jdbc'){
+	
+	dependencies {
+		
+		compile "org.springframework:spring-context:$springVersion" //[ERROR] faltaban los dos puntos despues de context {context$springVersion}
+		compile "org.springframework:spring-test:$springVersion" //[ERROR] faltaban los dos puntos despues de test {test$springVersion}
+		compile "org.springframework:spring-jdbc:$springVersion"
+		
+		testCompile 'commons-dbcp:commons-dbcp:1.4'
+		testCompile 'com.h2database:h2:1.3.170'
+		
+	}
+	
+}
+
+
+
+
+

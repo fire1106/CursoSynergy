@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.synergyj.bookmule.persistence.test.DataSourceTestCase" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-10-25T18:57:54" hostname="Jesus_Arredondo" time="0.0">
+  <properties/>
+  <testcase name="pruebaDataSource" classname="com.synergyj.bookmule.persistence.test.DataSourceTestCase" time="0.0"/>
+  <system-out><![CDATA[13:57:53,565  INFO Test worker support.DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+13:57:53,597  INFO Test worker support.DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+13:57:53,597  INFO Test worker support.DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+13:57:53,597  INFO Test worker support.DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+13:57:53,605  INFO Test worker support.DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@633a6671, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f1bb79c]
+13:57:53,893  INFO Test worker xml.XmlBeanDefinitionReader:316 - Loading XML bean definitions from class path resource [jdbcTestApplicationContext.xml]
+13:57:54,629  INFO Test worker support.GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@688968f8: startup date [Sat Oct 25 13:57:54 CDT 2014]; root of context hierarchy
+13:57:54,733  INFO Test worker config.PropertiesFactoryBean:172 - Loading properties file from class path resource [jdbc.properties]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

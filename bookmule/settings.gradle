@@ -1,0 +1,3 @@
+//va a contener que proyectos dependen del proyecto padre
+
+include "bookmule-core-domain" , "bookmule-persistence" , "bookmule-persistence-jdbc"

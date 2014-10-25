@@ -1,0 +1,4 @@
+dependencies {
+	compile project(':bookmule-core-domain')
+	
+}
